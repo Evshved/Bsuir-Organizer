@@ -31,6 +31,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 gem 'hamlit'
 gem 'oga', '~> 1.3', '>= 1.3.1'
+# or gem 'nokogiri'
+# for xlsx gem 'roo'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
