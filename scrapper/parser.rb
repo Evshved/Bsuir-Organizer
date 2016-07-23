@@ -14,7 +14,7 @@ class Work
 
   end
 
-  def parsing_loop( number_of_week )
+  def body_of_parce( number_of_week )
     @number_of_week = number_of_week
     while @index_of_row < @max_index_of_row do
       @check_week = @tablesheet.cell( 'B', @index_of_row )
@@ -45,16 +45,18 @@ class Work
 end
 
 
-# job = Work.new
-# puts("1 week  ===================","")
-# job.parsing_loop("1")
+job = Work.new
+puts("1 week  ===================","")
+job.body_of_parce("1")
 
-(1..4).each do |counter|
-  job = Work.new
-  puts("#{counter} week  ===================","")
-  job.parsing_loop("#{counter}")
-end
+# (1..4).each do |counter|
+#   job = Work.new
+#   puts("#{counter} week  ===================","")
+#   job.body_of_parce("#{counter}")
+# end
 
+
+#Using gem "oga if you need web - XML"
 # Oga.parse_xml(handle)
 
 # parser.parse do |node|
