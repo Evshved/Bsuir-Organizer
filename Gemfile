@@ -31,6 +31,9 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 gem 'hamlit'
 gem 'oga', '~> 1.3', '>= 1.3.1'
+gem 'bootstrap-sass', '~> 3.3.6'
+gem 'simple_form'
+
 # or gem 'nokogiri'
 # for xlsx gem 'roo'
 group :development, :test do
