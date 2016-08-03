@@ -37,6 +37,12 @@ gem 'simple_form'
 gem 'devise'
 # or gem 'nokogiri'
 # for xlsx gem 'roo'
+
+
+#Html2haml, not surprisingly, converts HTML to Haml. It works on HTML with embedded ERB tags as well as plain old HTML.
+gem 'html2haml'
+
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri

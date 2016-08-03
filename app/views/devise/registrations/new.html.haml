@@ -3,8 +3,8 @@
   = f.error_notification
   .form-inputs
     = f.input :email, required: true, autofocus: true
-    = f.input :user_name, required: true
-    = f.input :number_of_group, required: true
+    = f.input :user_name, required: true, hint: (" 6 - 14  characters ")
+    = f.input :number_of_group, required: true, hint: (" 6 digits ")
     = f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length)
     = f.input :password_confirmation, required: true
   .form-actions
