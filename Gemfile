@@ -42,6 +42,7 @@ gem 'devise'
 #Html2haml, not surprisingly, converts HTML to Haml. It works on HTML with embedded ERB tags as well as plain old HTML.
 gem 'html2haml'
 
+gem 'rspec-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
