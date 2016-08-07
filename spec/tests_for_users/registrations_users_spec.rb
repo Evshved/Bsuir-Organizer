@@ -17,8 +17,8 @@ feature "Register users:" do
       fill_in 'Email', with: "#{email}"
       fill_in 'User name', with: "#{name_of_user}"
       fill_in 'Number of group', with: "#{digit_number}"
-      fill_in 'Password', with: "#{password}", exact: false
-      fill_in 'Password confirmation', with: "#{password}", exact: false
+      fill_in "Password", with: "#{password}", match: :first
+      fill_in 'Password confirmation', with: "#{password}"
       click_button "Sign up"
 
       expect(page).to have_content("Instructions here.")
