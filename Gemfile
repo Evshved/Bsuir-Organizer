@@ -48,7 +48,7 @@ gem 'rspec-rails'
 gem 'test-unit'
 # Feature specs require the Capybara (http://github.com/jnicklas/capybara) gem, version 2.2.0 or later. We recommend version 2.4.0 or later to avoid some deprecation warnings and have support for `config.expose_dsl_globally = false`.
 gem 'capybara'
-
+gem 'launchy'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
