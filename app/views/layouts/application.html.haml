@@ -10,24 +10,20 @@
     %nav.navbar.navbar-default
       .navbar-container
         .navbar-header
-          %button.navbar-toggle.collapsed{"data-target" => "#bs-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
-            %span.sr-only Toggle Navigation
-            %span.icon-bar
-            %span.icon-bar
           .navbar-brand
             = link_to "Bsuir Schedule", root_path
         #bs-navbar-collapse-1.collapse.navbar-collapse
           %ul.nav.navbar-nav.navbar-right
             - if user_signed_in?
               %li
-                = link_to "Create Schedule", new_instruction_path
+                = link_to "Создать расписание", new_instruction_path
               %li
-                = link_to "Logout", destroy_user_session_path, method: :delete
+                = link_to "Выйти", destroy_user_session_path, method: :delete
             - else
               %li
-                = link_to "Login", new_user_session_path
+                = link_to "Войти", new_user_session_path
               %li
-                = link_to "Register", new_user_registration_path
+                = link_to "Зарегистрироваться", new_user_registration_path
     .container
       - flash.each do |name, msg|
         = content_tag :div, msg, class: [:alert, alert_for(name)]
