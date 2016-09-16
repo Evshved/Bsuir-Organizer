@@ -1,25 +1,34 @@
-%label График работы
-.input-group
-  %input.form-control{:placeholder => "Test", :type => "text"}/
-%br
-%label Время от дома до работы.
-.input-group
-  %input.form-control{:placeholder => "40", :type => "text"}/
-  %span.input-group-addon минуты
-%br
-%label Время от работы до университета
-.input-group
-  %input.form-control{:placeholder => "30", :type => "text"}/
-  %span.input-group-addon минуты
-%br
-%label Время от университета до дома
-.input-group
-  %input.form-control{:placeholder => "45", :type => "text"}/
-  %span.input-group-addon минуты
-%br
-%label Минимальное время работы
-.input-group
-  %input.form-control{:placeholder => "2", :type => "text"}/
-  %span.input-group-addon часов
-%br/
+!!!
+%html{:lang => "en"}
+  %head
+    %link{:href => "/assets/stylesheets/instructions.scss", :rel => "stylesheet"}/
+  %body
+    %label График работы:
+    .input-group-timetable
+      %input.form-control{:placeholder => "8:00 - 22:00", :type => "text"}/
+    %br
+    %br
+    %label Время от дома до работы:
+    .input-group
+      %input.form-control{:placeholder => "40", :type => "text"}/
+      %span.input-group-addon минуты
+    %br
+    %label от работы до университета:
+    .input-group
+      %input.form-control{:placeholder => "30", :type => "text"}/
+      %span.input-group-addon минуты
+    %br
+    %label от университета до дома:
+    .input-group
+      %input.form-control{:placeholder => "45", :type => "text"}/
+      %span.input-group-addon минуты
+    %br
+    %label Минимальное время работы:
+    .input-group
+      %input.form-control{:placeholder => "2", :type => "text"}/
+      %span.input-group-addon часов
+    %br/
+    %button.btn.btn-success{:type => "button"} Посчитать
+
+
 
