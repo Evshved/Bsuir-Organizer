@@ -1,34 +1,35 @@
 !!!
 %html{:lang => "en"}
   %head
-    %link{:href => "/assets/stylesheets/instructions.scss", :rel => "stylesheet"}/
+    %title Settings
   %body
     %label График работы:
-    .input-group-timetable
-      %input.form-control{:placeholder => "8:00 - 22:00", :type => "text"}/
-    %br
-    %br
-    %label Время от дома до работы:
-    .input-group
-      %input.form-control{:placeholder => "40", :type => "text"}/
-      %span.input-group-addon минуты
-    %br
-    %label от работы до университета:
-    .input-group
-      %input.form-control{:placeholder => "30", :type => "text"}/
-      %span.input-group-addon минуты
-    %br
-    %label от университета до дома:
-    .input-group
-      %input.form-control{:placeholder => "45", :type => "text"}/
-      %span.input-group-addon минуты
-    %br
-    %label Минимальное время работы:
-    .input-group
-      %input.form-control{:placeholder => "2", :type => "text"}/
-      %span.input-group-addon часов
-    %br/
-    %button.btn.btn-success{:type => "button"} Посчитать
+    %form#settings
+      .input-group-timetable
+        %input.form-control#timetable{:placeholder => "8:00 - 22:00", :type => "text"}/
+      %br
+      %br
+      %label Время от дома до работы:
+      .input-group
+        %input.form-control#hometowork{:placeholder => "40", :type => "text"}/
+        %span.input-group-addon минуты
+      %br
+      %label от работы до университета:
+      .input-group
+        %input.form-control#worktouniver{:placeholder => "30", :type => "text"}/
+        %span.input-group-addon минуты
+      %br
+      %label от университета до дома:
+      .input-group
+        %input.form-control#univertohome{:placeholder => "45", :type => "text"}/
+        %span.input-group-addon минуты
+      %br
+      %label Минимальное время работы:
+      .input-group
+        %input.form-control#minworktime{:placeholder => "2", :type => "text"}/
+        %span.input-group-addon часов
+      %br/
+      %button.btn.btn-success{:type => "submit"}
+        Answer
 
-
-
+0
