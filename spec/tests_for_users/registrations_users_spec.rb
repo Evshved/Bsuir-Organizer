@@ -1,5 +1,4 @@
-require 'rails_helper.rb'
-require 'spec_helper.rb'
+# require 'rails_helper.rb'
 
 feature "Register users:" do
   scenario "Register with trully input data" do
