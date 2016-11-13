@@ -1,20 +1,35 @@
-// @import "bootstrap-sprockets";
+@import "bootstrap-sprockets";
 @import "bootstrap";
-@import "instructions";
+@import "instructions/new.scss";
 body {
   background-color: #fafafa;
   font-family: proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  color: #333;
+  background: url(./background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
-
+.container {
+    width: 1200px;
+}
 .navbar-brand {
   a {
     color: #fff;
   }
 }
 
-.navbar-default {
-  background-color: #125688;
-  height: 54px;
+.container-settings {
+  position: relative;
+  border: 2px solid #a1a1a1;
+  border-radius: 10px;
+  background: fff;
+  background-color: white;
+  padding: 30px 20px;
+}
+.input-group {
+  margin: 30px 20px 20px 20px;
 }
 
 
@@ -24,26 +39,46 @@ body {
   margin: 0 auto;
 }
 
-ul li {
-  background-color: #125688;
-  display: inline;
-  margin-right: 5px;
+.container-register{
+  background-color: white;
+  background: fff;
+  border-radius: 10px;
+  border: 2px solid #a1a1a1;
+  padding: 10px 20px 5px 20px;
+  position: relative;
 }
 
-ul li:hover {
-  color: #fff;
-  background-color: #0f4872;
-  display: inline;
-  margin-right: 5px;
-  border-radius: 100px;
+.container-login{
+  background-color: white;
+  background: fff;
+  border-radius: 10px;
+  border: 2px solid #a1a1a1;
+  padding: 20px 20px;
+  position: relative;
 }
 
+.container-password{
+  background-color: white;
+  background: fff;
+  border-radius: 10px;
+  border: 2px solid #a1a1a1;
+  padding: 20px 20px;
+  position: relative;
+}
+
+.myfont {
+  font-size: 24px;
+}
 
 .posts-wrapper {
-  padding-top: 40px;
-  margin: 0 auto;
+  margin: -50px auto;
   max-width: 642px;
+  padding-top: 40px;
   width: 100%;
+}
+
+.form-control{
+    width: 100%;
 }
 
 .post {
@@ -76,7 +111,6 @@ ul li:hover {
   padding: 24px 24px;
   font-size: 15px;
   line-height: 18px;
-
 }
 
 .form-wrapper {
@@ -91,4 +125,11 @@ ul li:hover {
 .edit-links {
   margin-top: 20px;
   margin-bottom: 40px;
+}
+
+.navbar-default .navbar-brand {
+  color: #333;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #333;
 }

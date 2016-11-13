@@ -14,3 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require settings.js
+//= require libs/ie-emulation-modes-warning.js
+//= require libs/jquery-3.1.0.min.js
+//= require libs/jquery.validate.min.js
