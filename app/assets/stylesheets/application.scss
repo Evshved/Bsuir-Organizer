@@ -1,6 +1,6 @@
-// @import "bootstrap-sprockets";
+@import "bootstrap-sprockets";
 @import "bootstrap";
-@import "instructions";
+@import "instructions/new.scss";
 body {
   background-color: #fafafa;
   font-family: proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
