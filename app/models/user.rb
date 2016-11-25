@@ -6,4 +6,6 @@ class User < ApplicationRecord
   validates :user_name, presence: true, length: { minimum:4, maximum: 30 }
   validates :number_of_group, presence: true, length: { minimum:6, maximum: 6}
   has_many :colors
+  has_one  :setting, foreign_key: 'user_id', dependent: :destroy
+
 end
