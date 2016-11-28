@@ -14,4 +14,12 @@ FactoryGirl.define do
     color_seminars           "red"
     color_nonactive_lessons  "red"
   end
+  factory :setting do
+    beginning_of_work         "2:00"
+    end_of_work               "08:00"
+    time_home_to_work         "999"
+    time_work_to_univer       "1"
+    time_univer_to_home       "55"
+    min_work_time             "112"
+  end
 end
