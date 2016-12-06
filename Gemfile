@@ -26,6 +26,8 @@ group :test do
   gem 'simplecov', require: false
   gem 'factory_girl'
   gem 'faker'
+  gem 'pry'
+  gem 'pry-byebug'
 end
 
 

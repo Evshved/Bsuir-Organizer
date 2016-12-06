@@ -1,5 +1,7 @@
 class InstructionsController < ApplicationController
+  require 'pry'
   before_action :authenticate_user!
+
   def index
   end
 
@@ -16,6 +18,15 @@ class InstructionsController < ApplicationController
     end
   end
 
+  def create
+    @setting = current_user.build_setting(setting_params)
+    if @setting.save
+      redirect_to root_path, notice: "Settings has been saved!"
+    else
+      render "new"
+    end
+  end
+
   def destroy
   end
 
@@ -26,5 +37,5 @@ class InstructionsController < ApplicationController
                                     :time_home_to_work, :time_work_to_univer,
                                     :time_univer_to_home, :min_work_time)
   end
-]
 end
+

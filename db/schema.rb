@@ -1,6 +1,4 @@
-ActiveRecord::Schema.define(version: 20161016202922) do
-
-  # These are extensions that must be enabled in order to support this database
+ActiveRecord::Schema.define(version: 20161124201522) do
   enable_extension "plpgsql"
 
   create_table "colors", force: :cascade do |t|
@@ -36,6 +34,7 @@ ActiveRecord::Schema.define(version: 20161016202922) do
     t.integer  "time_work_to_univer"
     t.integer  "time_univer_to_home"
     t.integer  "min_work_time"
+    t.integer  "user_id"
   end
 
   create_table "travels", force: :cascade do |t|
@@ -61,7 +60,7 @@ ActiveRecord::Schema.define(version: 20161016202922) do
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
     t.string   "user_name"
-    t.string  "number_of_group"
+    t.string   "number_of_group"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
     t.index ["user_name"], name: "index_users_on_user_name", unique: true, using: :btree
   end
