@@ -1,6 +1,9 @@
 !!!
 %html
   %head
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}/
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %title Bsuir Organizer
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
@@ -10,7 +13,6 @@
   %body
     %nav.navbar.navbar-default
       .container-fluid
-        / Brand and toggle get grouped for better mobile display
         .navbar-header
           %button.navbar-toggle.collapsed{"aria-expanded" => "false", "data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
             %span.sr-only Toggle navigation
@@ -18,7 +20,6 @@
             %span.icon-bar
             %span.icon-bar
           %a.navbar-brand{:href => "#"} Bsuir Organizer
-        / Collect the nav links, forms, and other content for toggling
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
           %ul.nav.navbar-nav.navbar-right
             - if user_signed_in?
@@ -35,6 +36,3 @@
       - flash.each do |name, msg|
         = content_tag :div, msg, class: [:alert, alert_for(name)]
       = yield
-    %script{:crossorigin => "anonymous", :integrity => "sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa", :src => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"}
-
-
