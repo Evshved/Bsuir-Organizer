@@ -1,6 +1,9 @@
 source 'https://rubygems.org'
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
 gem 'rails', '~> 5.0.0'
 gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.0'
@@ -16,6 +19,7 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'simple_form'
 gem 'devise'
 gem 'html2haml'
+<<<<<<< HEAD
 
 group :test do
   gem 'rspec-rails'
@@ -33,6 +37,23 @@ group :test do
   gem 'guard-rspec', require: false
 end
 
+=======
+
+
+group :test do
+  gem 'rspec-rails'
+  gem 'test-unit'
+  gem 'capybara'
+  gem 'launchy'
+  gem 'rubocop', require: false
+  gem 'simplecov', require: false
+  gem 'factory_girl'
+  gem 'faker'
+  gem 'pry'
+  gem 'pry-byebug'
+end
+
+>>>>>>> master
 
 group :development, :test do
   gem 'byebug', platform: :mri
