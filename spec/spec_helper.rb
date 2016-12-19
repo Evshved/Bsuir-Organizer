@@ -1,4 +1,6 @@
 require 'support/factory_girl_rails'
+# gem mutant
+require 'rspec/autorun'
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
