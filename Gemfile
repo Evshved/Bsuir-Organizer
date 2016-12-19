@@ -30,6 +30,7 @@ group :test do
   gem 'shoulda-matchers', '~> 3.1', require: false
   gem 'guard'
   gem 'guard-rspec', require: false
+  gem 'mutant-rspec'
 end
 
 
