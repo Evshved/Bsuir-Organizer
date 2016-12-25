@@ -10,6 +10,6 @@ So, in perspective, this service can help you to build your own schedule with st
 
 ##### Also you can control development using dates of commits.
 
-* Ruby version - ruby 2.2.2p95
+* Ruby version - ruby 2.4.0
 * Database (PostgreSQL) 9.3.13
 
