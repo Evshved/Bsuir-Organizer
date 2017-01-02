@@ -15,6 +15,9 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'simple_form'
 gem 'devise'
 gem 'html2haml'
+gem 'react-rails', '~> 1.10.0'
+gem 'therubyracer'
+gem 'eat'
 
 group :test do
   gem 'rspec-rails'
@@ -41,7 +44,6 @@ end
 group :development do
   gem 'web-console'
   gem 'listen', '~> 3.0.5'
-  gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
