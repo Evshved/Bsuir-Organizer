@@ -9,12 +9,16 @@
 //
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
-//
-//= require jquery
-//= require jquery_ujs
-//= require turbolinks
-//= require_tree .
-//= require settings.js
+
+
+//= require react
+//= require react_ujs
 //= require libs/ie-emulation-modes-warning.js
 //= require libs/jquery-3.1.0.min.js
 //= require libs/jquery.validate.min.js
+//= require bootstrap.min.js
+//= require turbolinks
+//= require components
+//= require settings.js
+//= require_tree .
+
