@@ -11,4 +11,7 @@ describe Schedule, type: :model do
   it { should allow_value('а.901-5к.').for(:number_of_audience) }
   it { should allow_value('Наганова Т. Е.').for(:teacher) }
   it { should allow_value("We're a company of pioneers.").for(:note) }
+
+  it { should_not allow_value('152:00').for(:start_time_class) }
+  it { should_not allow_value('09:3525').for(:end_time_class) }
 end
