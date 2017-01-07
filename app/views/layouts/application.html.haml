@@ -6,8 +6,8 @@
     %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %title Bsuir Organizer
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
     = csrf_meta_tags
     = favicon_link_tag 'favicon.ico'
   %body
@@ -19,7 +19,7 @@
             %span.icon-bar
             %span.icon-bar
             %span.icon-bar
-          %a.navbar-brand{:href => "#"} Bsuir Organizer
+          %a.navbar-brand{} Bsuir Organizer
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
           %ul.nav.navbar-nav.navbar-right
             - if user_signed_in?

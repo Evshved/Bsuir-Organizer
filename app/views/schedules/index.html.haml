@@ -1,0 +1,50 @@
+!!!
+%html{lang: 'en'}
+  %head
+    %title Index
+  %body{:onload => "myFunction()", :style => "margin:0;"}
+    #loader
+    #scheduleSheet.animate-bottom{:style => "display:none;"}
+      %h1
+        Current week - #{@date}
+      .tablesheet
+        %table
+          %tr
+            %th Weekday
+            %th Time
+            %th Subject
+            %th Type of subject
+            %th Subgroup
+            %th Class
+            %th Teacher
+            %th Counting working hours
+            %th Note
+          - @schedules.each do |schedule|
+            %tr
+              %td
+                .Weekday
+                  = react_component('RenderTable', text: schedule.weekday)
+              %td
+                .Time
+                  = react_component('RenderTable', text: "#{schedule.start_time_class} - #{schedule.end_time_class}")
+              %td
+                .Subject
+                  = react_component('RenderTable', text: schedule.name_of_subject)
+              %td
+                .TypeOfSubject
+                  = react_component('RenderTable', text: schedule.type_of_subject)
+              %td
+                .Subgroup
+                  = react_component('RenderTable', text: schedule.id_of_subgroup)
+              %td
+                .Class
+                  = react_component('RenderTable', text: schedule.number_of_audience)
+              %td
+                .Teacher
+                  = react_component('RenderTable', text: schedule.teacher)
+              %td
+                .CountingWorkingHours
+                  = react_component('RenderTable', text: '225')
+              %td
+                .Note
+                  = react_component('RenderTable', text: schedule.note)
