@@ -18,6 +18,7 @@ gem 'html2haml'
 gem 'react-rails', '~> 1.10.0'
 gem 'therubyracer'
 gem 'eat'
+gem 'nokogiri'
 
 group :test do
   gem 'rspec-rails'
