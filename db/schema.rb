@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161223185820) do
+ActiveRecord::Schema.define(version: 20170116140852) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +26,30 @@ ActiveRecord::Schema.define(version: 20161223185820) do
     t.string   "color_nonactive_lessons"
   end
 
+  create_table "groups", force: :cascade do |t|
+    t.string   "number_of_group"
+    t.integer  "id_group_api"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.string   "empty"
+  end
+
+  create_table "lessons", force: :cascade do |t|
+    t.integer  "id_of_week"
+    t.string   "weekday"
+    t.string   "start_time_class"
+    t.string   "end_time_class"
+    t.string   "name_of_subject"
+    t.string   "type_of_subject"
+    t.integer  "id_of_subgroup"
+    t.string   "number_of_audience"
+    t.string   "teacher"
+    t.string   "note"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "id_of_group"
+  end
+
   create_table "schedules", force: :cascade do |t|
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
@@ -33,13 +57,14 @@ ActiveRecord::Schema.define(version: 20161223185820) do
     t.string   "weekday"
     t.string   "type_of_subject"
     t.integer  "id_of_subgroup"
-    t.integer  "number_of_audience"
+    t.string   "number_of_audience"
     t.string   "teacher"
     t.string   "note"
     t.integer  "user_id"
     t.string   "start_time_class"
     t.string   "end_time_class"
     t.string   "name_of_subject"
+    t.string   "active"
   end
 
   create_table "settings", force: :cascade do |t|
@@ -80,6 +105,13 @@ ActiveRecord::Schema.define(version: 20161223185820) do
     t.string   "number_of_group"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
     t.index ["user_name"], name: "index_users_on_user_name", unique: true, using: :btree
+  end
+
+  create_table "weeks", force: :cascade do |t|
+    t.string   "date"
+    t.integer  "number_of_week"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
   create_table "works", force: :cascade do |t|
