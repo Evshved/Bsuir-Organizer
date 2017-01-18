@@ -1,4 +1,4 @@
-class ScheduleValidator < ActiveModel::EachValidator
+class LessonValidator < ActiveModel::EachValidator
   def validate_each(record, attribute, value)
     check = value.to_s.include? ':'
     return unless check && interval_time(record, attribute, value) != true

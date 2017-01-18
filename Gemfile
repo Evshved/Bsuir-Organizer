@@ -15,6 +15,10 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'simple_form'
 gem 'devise'
 gem 'html2haml'
+gem 'react-rails', '~> 1.10.0'
+gem 'therubyracer'
+gem 'eat'
+gem 'nokogiri'
 
 group :test do
   gem 'rspec-rails'
@@ -30,6 +34,7 @@ group :test do
   gem 'shoulda-matchers', '~> 3.1', require: false
   gem 'guard'
   gem 'guard-rspec', require: false
+  gem 'mutant-rspec'
 end
 
 
@@ -40,7 +45,6 @@ end
 group :development do
   gem 'web-console'
   gem 'listen', '~> 3.0.5'
-  gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
