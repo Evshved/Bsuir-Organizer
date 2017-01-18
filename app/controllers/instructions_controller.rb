@@ -1,5 +1,4 @@
 class InstructionsController < ApplicationController
-  require 'pry'
   before_action :authenticate_user!
 
   def index
@@ -12,18 +11,9 @@ class InstructionsController < ApplicationController
   def create
     @setting = current_user.build_setting(setting_params)
     if @setting.save
-      redirect_to root_path, notice: 'Settings has been saved!'
+      redirect_to schedules_path, notice: 'Settings of schedule has been saved!'
     else
       render 'new'
-    end
-  end
-
-  def create
-    @setting = current_user.build_setting(setting_params)
-    if @setting.save
-      redirect_to root_path, notice: "Settings has been saved!"
-    else
-      render "new"
     end
   end
 
@@ -38,4 +28,3 @@ class InstructionsController < ApplicationController
                                     :time_univer_to_home, :min_work_time)
   end
 end
-
