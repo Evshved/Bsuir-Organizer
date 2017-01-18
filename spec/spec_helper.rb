@@ -9,6 +9,8 @@ RSpec.configure do |config|
   config.mock_with :rspec do |mocks|
     mocks.verify_partial_doubles = true
   end
+  config.infer_spec_type_from_file_location!
   config.shared_context_metadata_behavior = :apply_to_host_groups
-  config.include FactoryGirl::Syntax::Methods
+  FactoryGirl.definition_file_paths = [File.expand_path('../factories', __FILE__)]
+  FactoryGirl.find_definitions
 end
