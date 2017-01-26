@@ -1,4 +1,4 @@
-class WeekParser
+eclass WeekParser
   def parser
     date = Time.now
     p "date - #{date}"
