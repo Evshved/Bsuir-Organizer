@@ -9,5 +9,6 @@ class LessonValidator < ActiveModel::EachValidator
     value = value.split(':')
     value.map!(&:to_i)
     return true if ((0..23).cover? value[0]) && ((0..59).cover? value[1])
+    p 1
   end
 end
